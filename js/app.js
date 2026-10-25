@@ -42,6 +42,21 @@
   $("#legalBtn").addEventListener("click", function () { dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", ""); });
   $("#legalClose").addEventListener("click", function () { dlg.close ? dlg.close() : dlg.removeAttribute("open"); });
 
+  // compact header after scrolling
+  var header = $(".header");
+  var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 40); };
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  // "Aucun" document unchecks the others, and vice versa
+  $$('#reqForm input[name="documents"]').forEach(function (cb) {
+    cb.addEventListener("change", function () {
+      if (!cb.checked) return;
+      $$('#reqForm input[name="documents"]').forEach(function (o) {
+        if (o !== cb && ((cb.value === "Aucun") !== (o.value === "Aucun"))) o.checked = false;
+      });
+    });
+  });
+
   // form
   var form = $("#reqForm"), status = $("#formStatus");
   form.addEventListener("submit", function (e) {

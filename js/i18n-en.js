@@ -8,7 +8,7 @@ window.EN = {
   hero_title: "Independent real estate appraisal in Senegal",
   hero_name: "Magaye Sène Real Estate Appraisal and Valuation Firm",
   hero_sub: "Real estate expert – Dakar, Senegal",
-  hero_intro: "Over 40 years of experience serving individuals, businesses and institutions. Independent, impartial and documented valuations to inform your decisions: market and rental value, amicable and court-appointed appraisals, advice.",
+  hero_intro: "Over 40 years of experience serving individuals, businesses and institutions. Independent, impartial and documented real estate appraisals to inform your property decisions.",
   cl_k: "Who we serve", cl_title: "An appraisal for every situation",
   cl1_t: "Individuals in Senegal", cl1: "Buying, selling, inheritance, family division or renting: know a property's real value before you decide.",
   cl2_t: "Senegalese abroad", cl2: "An appraisal carried out remotely, with communication by WhatsApp or email and a report sent as a PDF.", cl2_link: "Appraisals from abroad",
