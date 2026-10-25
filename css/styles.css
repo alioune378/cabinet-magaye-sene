@@ -188,3 +188,14 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 .legal h2{font-size:32px}
 .legal h3{font-size:21px;margin-top:18px}
 .legal p{font-size:14.5px;color:var(--gray)}
+
+/* headline name + client segments */
+.hero-name{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.1vw,26px);color:var(--bordeaux);margin:4px 0 0;line-height:1.35}
+.segments{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px;border-top:1px solid var(--navy)}
+.seg{padding:28px 28px 30px 0;border-right:1px solid var(--line)}
+.seg+.seg{padding-left:28px}
+.seg:last-child{border-right:0}
+.seg h3{font-size:26px;font-weight:500}
+.seg p{color:var(--gray);font-size:15.5px}
+.seg .btn-text{font-size:13.5px;font-weight:600;letter-spacing:.04em;text-decoration:none;display:inline-block}
+@media (max-width:860px){.segments{grid-template-columns:1fr}.seg,.seg+.seg{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}}
