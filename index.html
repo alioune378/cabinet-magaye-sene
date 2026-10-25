@@ -12,7 +12,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -47,24 +47,24 @@
   <!-- 1. Accueil -->
   <section class="hero" id="accueil">
     <div class="wrap hero-grid">
-      <div>
-        <p class="status" data-i18n="status">Inscrit au tableau de l'Ordre National des Experts du Sénégal (ONES), section immobilière – n° D1/49/84/19/E</p>
-        <h1 data-i18n="hero_title">Cabinet d'expertise et d'évaluation immobilière Magaye Sène</h1>
+      <div class="hero-main">
         <p class="hero-sub" data-i18n="hero_sub">Expert immobilier agréé – Dakar, Sénégal</p>
+        <h1 data-i18n="hero_title">Cabinet d'expertise et d'évaluation immobilière Magaye Sène</h1>
         <p class="hero-intro" data-i18n="hero_intro">Le cabinet réalise des expertises immobilières indépendantes au Sénégal : évaluation de la valeur vénale et locative des biens, conseil, expertises amiables et judiciaires. Chaque mission donne lieu à un rapport écrit, motivé et signé par l'expert.</p>
         <div class="ctas">
-          <a class="btn btn-gold" href="#contact" data-i18n="cta_request">Demander une expertise</a>
-          <a class="btn btn-line" href="#deroulement" data-i18n="cta_how">Comment se déroule une expertise</a>
+          <a class="btn btn-dark" href="#contact" data-i18n="cta_request">Demander une expertise</a>
+          <a class="btn btn-text" href="#deroulement" data-i18n="cta_how">Comment se déroule une expertise</a>
         </div>
       </div>
-      <img class="hero-emblem" src="assets/embleme-clair.svg" alt="" width="240" height="240">
-    </div>
-    <div class="wrap">
-      <ul class="markers">
-        <li><strong data-i18n="m1_t">Plus de 40 ans</strong><span data-i18n="m1">d'expérience dans l'immobilier au Sénégal</span></li>
-        <li><strong data-i18n="m2_t">Expert inscrit à l'Ordre</strong><span data-i18n="m2">section immobilière</span></li>
-        <li><strong data-i18n="m3_t">Indépendance</strong><span data-i18n="m3">et secret professionnel</span></li>
-      </ul>
+      <aside class="hero-side">
+        <img class="hero-emblem" src="assets/embleme.svg" alt="" width="120" height="120">
+        <p class="status" data-i18n="status">Inscrit au tableau de l'Ordre National des Experts du Sénégal (ONES), section immobilière – n° D1/49/84/19/E</p>
+        <ul class="markers">
+          <li><strong data-i18n="m1_t">Plus de 40 ans</strong><span data-i18n="m1">d'expérience dans l'immobilier au Sénégal</span></li>
+          <li><strong data-i18n="m2_t">Expert inscrit à l'Ordre</strong><span data-i18n="m2">section immobilière</span></li>
+          <li><strong data-i18n="m3_t">Indépendance</strong><span data-i18n="m3">et secret professionnel</span></li>
+        </ul>
+      </aside>
     </div>
   </section>
 
@@ -72,7 +72,7 @@
   <section class="section" id="expert">
     <div class="wrap two">
       <div>
-        <p class="kicker" data-i18n="exp_k">L'expert</p>
+        <p class="kicker" data-n="01" data-i18n="exp_k">L'expert</p>
         <h2 data-i18n="exp_title">Magaye Sène, expert immobilier</h2>
         <p data-i18n="exp_p">Magaye Sène exerce dans l'immobilier au Sénégal depuis plus de 40 ans. Il est inscrit au tableau de l'Ordre National des Experts du Sénégal, dans la section immobilière, sous le numéro D1/49/84/19/E.</p>
         <div class="verify">
@@ -95,10 +95,10 @@
   <!-- 3. Domaines -->
   <section class="section alt" id="domaines">
     <div class="wrap">
-      <p class="kicker" data-i18n="dom_k">Missions</p>
+      <p class="kicker" data-n="02" data-i18n="dom_k">Missions</p>
       <h2 data-i18n="dom_title">Domaines d'intervention</h2>
       <p class="lede" data-i18n="dom_intro">Le cabinet intervient sur tous types de biens immobiliers au Sénégal : terrains, maisons, appartements, immeubles, locaux commerciaux et professionnels.</p>
-      <div class="grid5">
+      <div class="services">
         <article class="tile"><span class="num">01</span><h3 data-i18n="d1_t">Évaluation de la valeur vénale</h3><p data-i18n="d1">Détermination de la valeur d'un bien en vue d'une vente, d'un achat, d'un partage, d'une succession, d'un apport en société ou d'une garantie bancaire.</p></article>
         <article class="tile"><span class="num">02</span><h3 data-i18n="d2_t">Évaluation de la valeur locative</h3><p data-i18n="d2">Détermination du loyer correspondant au marché, pour la mise en location, le renouvellement ou la révision d'un bail.</p></article>
         <article class="tile"><span class="num">03</span><h3 data-i18n="d3_t">Expertises amiables</h3><p data-i18n="d3">Missions confiées d'un commun accord par les parties, par exemple pour un partage familial, un désaccord sur une valeur ou un constat sur l'état d'un bien.</p></article>
@@ -111,7 +111,7 @@
   <!-- 4. Déroulement -->
   <section class="section" id="deroulement">
     <div class="wrap">
-      <p class="kicker" data-i18n="der_k">Méthode</p>
+      <p class="kicker" data-n="03" data-i18n="der_k">Méthode</p>
       <h2 data-i18n="der_title">Comment se déroule une expertise</h2>
       <ol class="steps">
         <li><h3 data-i18n="s1_t">Votre demande</h3><p data-i18n="s1">Vous décrivez le bien, sa localisation et l'objet de l'expertise, par téléphone, WhatsApp, e-mail ou formulaire.</p></li>
@@ -146,7 +146,7 @@
   <section class="section green" id="etranger">
     <div class="wrap two">
       <div>
-        <p class="kicker light" data-i18n="etr_k">Diaspora</p>
+        <p class="kicker light" data-n="04" data-i18n="etr_k">Diaspora</p>
         <h2 data-i18n="etr_title">Vous vivez à l'étranger ? Faites évaluer un bien au Sénégal à distance</h2>
         <p data-i18n="etr_p">Acheter, vendre, partager ou louer un bien au Sénégal depuis l'étranger demande une information fiable. Le cabinet peut réaliser l'expertise sans que vous soyez présent.</p>
         <p class="note-gold"><strong data-i18n="retenir_t">À retenir</strong> <span data-i18n="retenir">Une expertise indépendante avant un achat vous permet de connaître la valeur réelle du bien et les points à vérifier, avant de vous engager.</span></p>
@@ -163,7 +163,7 @@
   <!-- 6. FAQ -->
   <section class="section" id="faq">
     <div class="wrap narrow">
-      <p class="kicker" data-i18n="faq_k">Informations utiles</p>
+      <p class="kicker" data-n="05" data-i18n="faq_k">Informations utiles</p>
       <h2 data-i18n="faq_title">Questions fréquentes</h2>
       <details><summary data-i18n="q1">Quelle différence entre une estimation et une expertise ?</summary><p data-i18n="a1">Une estimation est un avis de prix, souvent donné par un professionnel de la vente. Une expertise est réalisée par un expert inscrit à l'Ordre, indépendant de la transaction, et aboutit à un rapport écrit et motivé qui peut être produit devant une banque, un notaire ou un tribunal.</p></details>
       <details><summary data-i18n="q2">Titre foncier, bail, délibération : quelle différence ?</summary><p data-i18n="a2">En termes simples : le titre foncier établit la propriété du terrain ; le bail donne un droit d'occupation pour une durée définie ; la délibération d'une commune accorde un droit d'usage sur une terre du domaine national. La nature du droit influence fortement la valeur du bien.</p></details>
@@ -177,7 +177,7 @@
   <section class="section alt" id="contact">
     <div class="wrap two contact">
       <div>
-        <p class="kicker" data-i18n="ct_k">Contact</p>
+        <p class="kicker" data-n="06" data-i18n="ct_k">Contact</p>
         <h2 data-i18n="ct_title">Demander une expertise</h2>
         <ul class="coords">
           <li><span class="lbl" data-i18n="c_addr">Adresse</span><span>Sud Foire, Villa n° 20, Cité Sonatel 2, Dakar, Sénégal</span></li>
