@@ -109,6 +109,10 @@ window.EN = {
   lg4_t: "Personal data", lg4: "Data sent through the form or by message is used only to process your request. It is never sold or shared with third parties and is kept only as long as the assignment requires. Under Senegal's Law No. 2008-12 of 25 January 2008 on personal data protection, you may request access to, correction or deletion of your data by contacting the firm.",
   lg5_t: "Professional confidentiality", lg5: "All information entrusted to the firm in the course of an assignment is covered by professional confidentiality.",
   lg6_t: "Hosting and design", lg6: "Website hosted by Netlify, Inc. Design: Dalal Studio.",
+  cta_abroad: "Request an appraisal from abroad",
+  faq_more: "Have another question?", cta_request2: "Contact the firm",
+  f_next: "After you send the form, the firm replies promptly to clarify the assignment. For a complex file, a written proposal (scope, timeframe and fees) is sent within 24 hours.",
+  mb_request: "Request an appraisal",
   close: "Close"
 };
 window.FR_EXTRA = {

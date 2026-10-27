@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://splendorous-chaja-a84198.netlify.app/sitemap.xml

@@ -265,3 +265,17 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 .dg-word figcaption span{font-size:14px;letter-spacing:.06em;color:#B9C1D3}
 .team{margin-top:clamp(40px,6vw,64px);max-width:760px}
 .team p{color:var(--gray);font-size:17px}
+
+/* Calls to action repeated after key sections */
+.section-cta{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;color:var(--gray)}
+.btn-on-dark{background:#fff;color:var(--navy)}
+.btn-on-dark:hover{background:var(--bordeaux);color:#fff}
+.form-next{font-size:14.5px;color:var(--gray);margin:-4px 0 18px;padding-left:12px;border-left:2px solid var(--bordeaux)}
+/* Sticky contact bar on phones */
+.mobile-bar{display:none}
+@media (max-width:720px){
+  .mobile-bar{display:grid;grid-template-columns:1fr 1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy);box-shadow:0 -6px 18px rgba(20,33,61,.18);padding-bottom:env(safe-area-inset-bottom)}
+  .mobile-bar a{display:flex;align-items:center;justify-content:center;min-height:54px;color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.02em;border-right:1px solid rgba(255,255,255,.15);text-align:center;padding:0 10px;line-height:1.25}
+  .mobile-bar a:last-child{background:var(--bordeaux);border-right:0}
+  body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
+}
