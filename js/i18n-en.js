@@ -26,7 +26,7 @@ window.EN = {
   e3_t: "Confidentiality", e3: "Information entrusted to the firm remains confidential.",
   e4_t: "Reasoned report", e4: "Every conclusion is explained and justified in writing.",
   pc_k: "Background", pc_title: "A hands-on professional since the 1970s",
-  pc1: "Trained in the building trades in the 1970s, Magaye Sène has always remained a man of the field. To this day, he personally supervises every file and pays close attention to the quality of the work, down to the details.",
+  pc1: "A surveyor by training since the 1970s, Magaye Sène has always remained a man of the field. To this day, he personally supervises every file and pays close attention to the quality of the work, down to the details.",
   pc2: "Over his career he has worked for individuals and businesses as well as for the State, banks and the courts. His landmark projects include the Dalal Jamm Hospital, and he contributed to the Senegalese State's work on the \"surface corrigée\" (adjusted floor area) method.",
   pc3: "Depending on the project, the firm works alongside architecture practices, audit firms and construction companies. Magaye Sène has also trained many young professionals who are now experts and engineers themselves.",
   pf1_t: "Punctuality", pf1: "Appointments and agreed deadlines are respected.",
