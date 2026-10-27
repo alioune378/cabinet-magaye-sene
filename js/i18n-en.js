@@ -106,16 +106,24 @@ window.EN = {
   lg1_t: "Publisher", lg1: "Magaye Sène Expert Immobilier (MS Expert Immobilier), sole proprietorship, Sud Foire, Villa No. 20, Cité Sonatel 2, Dakar, Senegal. Phone: +221 77 638 36 82. Email: contact@magayesene-expert.com. RCCM No. SN-DKR-2024-A-31692. NINEA 004522167.",
   lg2_t: "Regulated profession", lg2: "Expert registered with the National Order of Experts of Senegal (ONES), real estate section, No. D1/49/84/19/E. The profession is governed by Law No. 2017-16 of 17 February 2017 and by the Order's Code of Professional Duties.",
   lg3_t: "Website content", lg3: "The information on this website is general. It is neither an appraisal nor an opinion on any particular property.",
-  lg4_t: "Personal data", lg4: "Data sent through the form or by message is used only to process your request. It is never sold or shared with third parties and is kept only as long as the assignment requires. Under Senegal's Law No. 2008-12 of 25 January 2008 on personal data protection, you may request access to, correction or deletion of your data by contacting the firm.",
+  lg4_t: "Personal data", lg4: "Data sent through the form or by message is used only to process your request. Documents attached to the form are transmitted securely and stored by the website host, Netlify, solely to handle the request. It is never sold or shared with third parties and is kept only as long as the assignment requires. Under Senegal's Law No. 2008-12 of 25 January 2008 on personal data protection, you may request access to, correction or deletion of your data by contacting the firm.",
   lg5_t: "Professional confidentiality", lg5: "All information entrusted to the firm in the course of an assignment is covered by professional confidentiality.",
   lg6_t: "Hosting and design", lg6: "Website hosted by Netlify, Inc. Design: Dalal Studio.",
   cta_abroad: "Request an appraisal from abroad",
   faq_more: "Have another question?", cta_request2: "Contact the firm",
   f_next: "After you send the form, the firm replies promptly to clarify the assignment. For a complex file, a written proposal (scope, timeframe and fees) is sent within 24 hours.",
   mb_request: "Request an appraisal",
+  f_up: "Attach documents (optional)",
+  f_up_hint: "PDF, JPG or PNG, 7 MB in total. Photos are reduced automatically before sending.",
+  f_up1: "Property document (land title, lease or allocation decision)", f_up2: "Plan or sketch", f_up3: "Photo of the property",
+  f_up_warn: "Send only the documents needed for the appraisal. Do not send identity documents.",
+  f_too_big: "The attached files are too large (7 MB maximum in total). Please send a smaller PDF or fewer files, or send them later by WhatsApp.",
+  f_bad_type: "Only PDF, JPG or PNG files can be attached.",
   close: "Close"
 };
 window.FR_EXTRA = {
+  f_too_big: "Les fichiers joints sont trop lourds (7 Mo maximum au total). Envoyez un PDF plus léger ou moins de fichiers, ou transmettez-les plus tard par WhatsApp.",
+  f_bad_type: "Seuls les fichiers PDF, JPG ou PNG peuvent être joints.",
   f_req: "Merci de remplir les champs obligatoires (*).", f_bad_email: "Merci d'indiquer une adresse e-mail valide.",
   f_sending: "Envoi…", f_ok: "Merci. Votre demande a bien été reçue ; le cabinet vous contactera pour préciser la mission.",
   f_err: "La demande n'a pas pu être envoyée. Merci de réessayer, ou de contacter le cabinet par téléphone ou WhatsApp."

@@ -279,3 +279,11 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
   .mobile-bar a:last-child{background:var(--bordeaux);border-right:0}
   body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
 }
+
+/* Document uploads */
+.uploads{display:grid;gap:12px}
+.up-hint,.up-warn{font-size:13.5px;color:var(--gray);margin:0}
+.up-warn{color:var(--bordeaux)}
+label.up{display:grid;gap:6px;font-size:14.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink)}
+label.up input[type=file]{font:inherit;font-size:14px;padding:10px;border:1px dashed var(--line);background:var(--white);width:100%;max-width:100%}
+label.up input[type=file]::file-selector-button{font:inherit;font-size:13.5px;font-weight:600;border:1px solid var(--navy);background:#fff;color:var(--navy);padding:8px 14px;margin-right:12px;cursor:pointer}

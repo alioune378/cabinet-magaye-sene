@@ -38,8 +38,8 @@
 <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
 
 <!-- Netlify form definition -->
-<form name="demande-expertise" netlify netlify-honeypot="bot-field" hidden>
-  <input name="nom"><input name="telephone"><input name="email"><input name="pays"><input name="type_bien"><input name="localisation"><input name="objet"><input name="documents"><textarea name="message"></textarea><input name="langue"><input name="bot-field">
+<form name="demande-expertise" netlify netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+  <input name="nom"><input name="telephone"><input name="email"><input name="pays"><input name="type_bien"><input name="localisation"><input name="objet"><input name="documents"><textarea name="message"></textarea><input name="langue"><input type="file" name="piece_propriete"><input type="file" name="piece_plan"><input type="file" name="piece_photo"><input name="bot-field">
 </form>
 
 <header class="header">
@@ -279,7 +279,7 @@
         </div>
       </div>
 
-      <form id="reqForm" class="form" name="demande-expertise" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <form id="reqForm" class="form" name="demande-expertise" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="demande-expertise">
         <input type="hidden" name="langue" id="f-lang" value="fr">
         <p class="hp"><label>Ne pas remplir <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -318,6 +318,14 @@
             <label><input type="checkbox" name="documents" value="Aucun"> <span data-i18n="k5">Aucun</span></label>
           </div>
         </fieldset>
+        <fieldset class="field uploads">
+          <legend data-i18n="f_up">Joindre des documents (facultatif)</legend>
+          <p class="up-hint" data-i18n="f_up_hint">Formats PDF, JPG ou PNG, 7 Mo au total. Les photos sont réduites automatiquement avant l'envoi.</p>
+          <label class="up"><span data-i18n="f_up1">Document de propriété (titre foncier, bail ou délibération)</span><input type="file" name="piece_propriete" accept=".pdf,image/*"></label>
+          <label class="up"><span data-i18n="f_up2">Plan ou croquis</span><input type="file" name="piece_plan" accept=".pdf,image/*"></label>
+          <label class="up"><span data-i18n="f_up3">Photo du bien</span><input type="file" name="piece_photo" accept="image/*"></label>
+          <p class="up-warn" data-i18n="f_up_warn">Envoyez uniquement les documents utiles à l'expertise. N'envoyez pas de pièce d'identité.</p>
+        </fieldset>
         <div class="field"><label for="f-msg" data-i18n="f_msg">Message</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
         <button type="submit" class="btn btn-green" id="f-submit" data-i18n="f_send">Envoyer la demande</button>
         <p class="small" data-i18n="f_conf">Les informations transmises sont confidentielles et servent uniquement à traiter votre demande.</p>
@@ -349,7 +357,7 @@
   <h3 data-i18n="lg3_t">Contenu du site</h3>
   <p data-i18n="lg3">Les informations publiées sur ce site sont fournies à titre général. Elles ne constituent ni une expertise, ni un avis sur un bien particulier.</p>
   <h3 data-i18n="lg4_t">Données personnelles</h3>
-  <p data-i18n="lg4">Les données transmises par le formulaire ou par message servent uniquement à traiter votre demande. Elles ne sont ni vendues ni communiquées à des tiers, et sont conservées le temps nécessaire à la mission. Conformément à la loi n° 2008-12 du 25 janvier 2008 sur la protection des données à caractère personnel, vous pouvez demander l'accès, la rectification ou la suppression de vos données en contactant le cabinet.</p>
+  <p data-i18n="lg4">Les données transmises par le formulaire ou par message servent uniquement à traiter votre demande. Les documents joints au formulaire sont transmis de façon sécurisée et conservés par l'hébergeur du site, Netlify, pour le seul traitement de la demande. Elles ne sont ni vendues ni communiquées à des tiers, et sont conservées le temps nécessaire à la mission. Conformément à la loi n° 2008-12 du 25 janvier 2008 sur la protection des données à caractère personnel, vous pouvez demander l'accès, la rectification ou la suppression de vos données en contactant le cabinet.</p>
   <h3 data-i18n="lg5_t">Secret professionnel</h3>
   <p data-i18n="lg5">Toutes les informations confiées au cabinet dans le cadre d'une mission sont couvertes par le secret professionnel.</p>
   <h3 data-i18n="lg6_t">Hébergement et réalisation</h3>
