@@ -103,7 +103,7 @@ window.EN = {
   brand_sub: "Real estate expert",
   foot_legal: "Legal notice and privacy", foot_made: "Website by Dalal Studio",
   lg_title: "Legal notice and privacy",
-  lg1_t: "Publisher", lg1: "Magaye Sène Expert Immobilier (MS Expert Immobilier), sole proprietorship, Sud Foire, Villa No. 20, Cité Sonatel 2, Dakar, Senegal. Phone: +221 77 638 36 82. Email: cabinet@magayesene-expert.com. RCCM No. SN-DKR-2024-A-31692. NINEA 004522167.",
+  lg1_t: "Publisher", lg1: "Magaye Sène Expert Immobilier (MS Expert Immobilier), sole proprietorship, Sud Foire, Villa No. 20, Cité Sonatel 2, Dakar, Senegal. Phone: +221 77 638 36 82. Email: contact@magayesene-expert.com. RCCM No. SN-DKR-2024-A-31692. NINEA 004522167.",
   lg2_t: "Regulated profession", lg2: "Expert registered with the National Order of Experts of Senegal (ONES), real estate section, No. D1/49/84/19/E. The profession is governed by Law No. 2017-16 of 17 February 2017 and by the Order's Code of Professional Duties.",
   lg3_t: "Website content", lg3: "The information on this website is general. It is neither an appraisal nor an opinion on any particular property.",
   lg4_t: "Personal data", lg4: "Data sent through the form or by message is used only to process your request. It is never sold or shared with third parties and is kept only as long as the assignment requires. Under Senegal's Law No. 2008-12 of 25 January 2008 on personal data protection, you may request access to, correction or deletion of your data by contacting the firm.",
