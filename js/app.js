@@ -5,6 +5,8 @@
   var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
   var FR = {}; var lang = "fr";
   $$("[data-i18n]").forEach(function (el) { FR[el.dataset.i18n] = el.textContent; });
+  $$("[data-i18n-aria]").forEach(function (el) { FR[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
+  $$("[data-i18n-title]").forEach(function (el) { FR[el.dataset.i18nTitle] = el.getAttribute("title"); });
   FR.meta_title = document.title;
   FR.meta_desc = $('meta[name="description"]').content;
   Object.keys(window.FR_EXTRA).forEach(function (k) { FR[k] = window.FR_EXTRA[k]; });
@@ -14,6 +16,8 @@
     lang = l === "en" ? "en" : "fr";
     document.documentElement.lang = lang;
     $$("[data-i18n]").forEach(function (el) { var v = t(el.dataset.i18n); if (v != null) el.textContent = v; });
+    $$("[data-i18n-aria]").forEach(function (el) { var v = t(el.dataset.i18nAria); if (v != null) el.setAttribute("aria-label", v); });
+    $$("[data-i18n-title]").forEach(function (el) { var v = t(el.dataset.i18nTitle); if (v != null) el.setAttribute("title", v); });
     document.title = t("meta_title");
     $('meta[name="description"]').content = t("meta_desc");
     $$(".lang-btn").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
