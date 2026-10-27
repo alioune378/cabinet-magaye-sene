@@ -1,6 +1,6 @@
 /* Cabinet Magaye Sène — editorial design. Réalisation : Dalal Studio */
 :root{
-  --navy:#14213D; --navy-2:#1C2D52; --ink:#16181D; --bordeaux:#7A1F2B; --bordeaux-l:#C98B95;
+  --navy:#074331; --navy-2:#0B5640; --ink:#16181D; --bordeaux:#8C6A2E; --bordeaux-l:#D3B47A; --gold:#B98F48;
   --white:#FFFFFF; --paper:#F6F5F2; --stone:#E7E4DE; --gray:#5E626B; --line:#DAD6CF;
   --serif:"Cormorant Garamond","Lora",Georgia,"Times New Roman",serif;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -29,7 +29,7 @@ section[id]{scroll-margin-top:80px}
 .kicker{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-bottom:18px}
 .kicker::before{content:attr(data-n);font-family:var(--serif);font-size:20px;letter-spacing:0;color:var(--bordeaux);font-weight:600}
 .kicker::after{content:"";flex:0 0 48px;height:1px;background:var(--line)}
-.kicker.light{color:#B9C1D3}
+.kicker.light{color:#C3D3CA}
 .kicker.light::before{color:var(--bordeaux-l)}
 .kicker.light::after{background:rgba(255,255,255,.25)}
 
@@ -120,7 +120,7 @@ section[id]{scroll-margin-top:80px}
 @media (max-width:640px){.steps{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--navy);row-gap:0;margin-left:14px}.steps li{padding:0 0 26px 28px}.steps li::before{top:0;left:-1px;transform:translateX(-50%);padding:4px 0}}
 .card{background:var(--paper);padding:32px 30px}
 .card h3{font-size:26px}
-.card-green{background:var(--navy);color:#C9D0DE}
+.card-green{background:var(--navy);color:#D2DED7}
 .card-green h3{color:#fff}
 .card-green p{margin:0}
 .ticks{list-style:none;padding:0;margin:0 0 16px}
@@ -128,7 +128,7 @@ section[id]{scroll-margin-top:80px}
 .ticks li::before{content:"—";position:absolute;left:0;color:var(--bordeaux)}
 
 /* diaspora — navy band */
-.green{background:var(--navy);color:#C9D0DE}
+.green{background:var(--navy);color:#D2DED7}
 .green h2{color:#fff}
 .remote{list-style:none;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.2)}
 .remote li{padding:20px 0;border-bottom:1px solid rgba(255,255,255,.2)}
@@ -176,7 +176,7 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 @media (max-width:560px){.form .btn{justify-self:stretch}}
 
 /* footer */
-.footer{background:var(--ink);color:#A9AEB8;padding:50px 0}
+.footer{background:#053C2D;color:#C3D3CA;padding:50px 0;border-top:3px solid var(--gold)}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
 .foot img{height:44px;width:auto}
 .foot-txt{font-size:13.5px;text-align:right}
@@ -184,7 +184,7 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 .linklike{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
 @media (max-width:700px){.foot-txt{text-align:left}}
 .legal{max-width:720px;width:calc(100% - 28px);border:0;padding:34px;background:#fff;color:var(--ink);border-top:3px solid var(--navy)}
-.legal::backdrop{background:rgba(20,33,61,.7)}
+.legal::backdrop{background:rgba(7,67,49,.7)}
 .legal h2{font-size:32px}
 .legal h3{font-size:21px;margin-top:18px}
 .legal p{font-size:14.5px;color:var(--gray)}
@@ -240,8 +240,8 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 .header.scrolled .brand-name{font-size:21px}
 @media (max-width:520px){.brand img{height:42px}.brand-name{font-size:19px}.brand-sub{font-size:9px;letter-spacing:.1em}.brand{gap:8px}}
 .status.court{border-bottom:0;padding-bottom:0;margin-bottom:14px;font-weight:600;color:var(--bordeaux)}
-.foot-logo{background:#fff;padding:12px 16px}
-.foot-logo img{height:auto!important;width:220px}
+.foot-logo{background:transparent;padding:0}
+.foot-logo img{height:auto!important;width:300px;max-width:100%}
 
 .nav a{white-space:nowrap}
 .nav{gap:20px}
@@ -255,14 +255,14 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 .pc-facts li{display:grid;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
 .pc-facts strong{font-family:var(--serif);font-size:22px;color:var(--navy);font-weight:600;line-height:1.25}
 .pc-facts span{color:var(--gray);font-size:15px}
-.dg-word{margin:clamp(48px,7vw,88px) 0 0;padding:clamp(28px,5vw,56px);background:var(--navy);color:#DCE1EC;position:relative}
+.dg-word{margin:clamp(48px,7vw,88px) 0 0;padding:clamp(28px,5vw,56px);background:var(--navy);color:#E2EBE6;position:relative}
 .dg-label{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bordeaux-l);margin-bottom:22px}
 .dg-word blockquote{margin:0;max-width:820px;font-family:var(--serif);font-size:clamp(19px,2vw,23px);line-height:1.55;color:#fff}
 .dg-word blockquote p{margin:0 0 .9em}
 .dg-word blockquote::before{content:"\201C";display:block;font-size:84px;line-height:.6;color:var(--bordeaux-l);margin-bottom:14px}
 .dg-word figcaption{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.2);display:flex;flex-direction:column}
 .dg-word figcaption strong{font-family:var(--serif);font-size:22px;color:#fff;font-weight:600}
-.dg-word figcaption span{font-size:14px;letter-spacing:.06em;color:#B9C1D3}
+.dg-word figcaption span{font-size:14px;letter-spacing:.06em;color:#C3D3CA}
 .team{margin-top:clamp(40px,6vw,64px);max-width:760px}
 .team p{color:var(--gray);font-size:17px}
 
@@ -274,7 +274,7 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 /* Sticky contact bar on phones */
 .mobile-bar{display:none}
 @media (max-width:720px){
-  .mobile-bar{display:grid;grid-template-columns:1fr 1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy);box-shadow:0 -6px 18px rgba(20,33,61,.18);padding-bottom:env(safe-area-inset-bottom)}
+  .mobile-bar{display:grid;grid-template-columns:1fr 1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy);box-shadow:0 -6px 18px rgba(7,67,49,.18);padding-bottom:env(safe-area-inset-bottom)}
   .mobile-bar a{display:flex;align-items:center;justify-content:center;min-height:54px;color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.02em;border-right:1px solid rgba(255,255,255,.15);text-align:center;padding:0 10px;line-height:1.25}
   .mobile-bar a:last-child{background:var(--bordeaux);border-right:0}
   body{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
