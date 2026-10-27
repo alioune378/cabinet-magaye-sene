@@ -100,7 +100,7 @@ window.EN = {
   f_err: "The request could not be sent. Please try again, or contact the firm by phone or WhatsApp.",
   foot_ones: "Expert registered with ONES, real estate section – No. D1/49/84/19/E · Court-appointed expert",
   court: "Court-appointed expert (Expert près les Cours et Tribunaux)",
-  brand_sub: "Real estate appraisal and valuation",
+  brand_sub: "Real estate expert",
   foot_legal: "Legal notice and privacy", foot_made: "Website by Dalal Studio",
   lg_title: "Legal notice and privacy",
   lg1_t: "Publisher", lg1: "Magaye Sène Expert Immobilier (MS Expert Immobilier), sole proprietorship, Sud Foire, Villa No. 20, Cité Sonatel 2, Dakar, Senegal. Phone: +221 77 638 36 82. Email: magsene49@yahoo.fr. RCCM No. SN-DKR-2024-A-31692. NINEA 004522167.",
