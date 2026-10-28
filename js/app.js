@@ -1,4 +1,4 @@
-/* Cabinet Magaye Sène — site logic. Réalisation : Dalal Studio. */
+/* Cabinet Magaye Sène — site logic. Réalisation : Dalal Technologies. */
 (function () {
   "use strict";
   var $ = function (s) { return document.querySelector(s); };
