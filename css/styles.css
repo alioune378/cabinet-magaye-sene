@@ -317,3 +317,15 @@ label.up.drop:hover{background:var(--paper)}
 .file-list .fn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .file-list .fs{color:var(--gray);font-size:13px}
 .file-list .linklike{font-size:13px;color:var(--bordeaux)}
+
+/* Office photos */
+.office{margin-top:44px}
+.office-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:16px;align-items:start}
+.ph{margin:0;display:grid;gap:8px;min-width:0}
+.ph img{width:100%;height:auto;display:block;border:1px solid var(--line);background:var(--stone)}
+.ph-wide img{aspect-ratio:1448/1086;object-fit:cover}
+.ph-tall img{aspect-ratio:717/1086;object-fit:cover}
+.ph figcaption{font-size:13.5px;color:var(--gray);line-height:1.45}
+.ph-door{margin:0 0 18px;max-width:420px}
+.ph-door img{aspect-ratio:960/1080;object-fit:cover}
+@media (max-width:700px){.office-grid{grid-template-columns:1fr}.ph-tall{max-width:420px}}

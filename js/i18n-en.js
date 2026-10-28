@@ -128,6 +128,7 @@ window.EN = {
   addr_full: "Sud Foire, Villa No. 20, Cité Sonatel 2, Dakar, Senegal",
   cty0: "Senegal", cty1: "France", cty2: "United States", cty3: "Canada", cty4: "Italy", cty5: "Spain", cty6: "Belgium", cty7: "United Kingdom", cty8: "Germany", cty9: "Côte d'Ivoire", cty10: "Mauritania", cty11: "Gambia",
   aria_home: "Magaye Sène Expert Immobilier – home", aria_quick: "Quick contact", map_title: "Map – Magaye Sène's office, Cité Sonatel 2, Sud Foire, Dakar",
+  of_t: "The office", of1: "The team's workspace", of2: "Reception and waiting area", of3: "The office entrance, to look for when you arrive",
   close: "Close"
 };
 window.FR_EXTRA = {
