@@ -287,3 +287,33 @@ details p{color:var(--gray);padding-bottom:14px;max-width:760px}
 label.up{display:grid;gap:6px;font-size:14.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink)}
 label.up input[type=file]{font:inherit;font-size:14px;padding:10px;border:1px dashed var(--line);background:var(--white);width:100%;max-width:100%}
 label.up input[type=file]::file-selector-button{font:inherit;font-size:13.5px;font-weight:600;border:1px solid var(--navy);background:#fff;color:var(--navy);padding:8px 14px;margin-right:12px;cursor:pointer}
+
+/* Milestones: registration and founding years */
+.milestones{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.milestones li{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1px solid var(--line);background:var(--paper)}
+.milestones strong{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--navy);line-height:1}
+.milestones span{font-size:14px;color:var(--gray);line-height:1.45}
+@media (max-width:520px){.milestones{grid-template-columns:1fr}}
+.verify .verify-link{display:inline-block;margin-top:10px;font-weight:600;text-decoration:none}
+
+/* Property location block */
+.locbox{display:grid;gap:12px;padding:16px;border:1px solid var(--line);background:var(--paper)}
+.locbox > legend{float:left;width:100%;margin-bottom:2px}
+.locbox > legend + *{clear:both}
+.loc-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.loc-actions .btn{font-size:14px;min-height:44px}
+
+/* Single upload area */
+.uploads{position:relative}
+.sr-file{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden}
+label.up.drop{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;padding:22px 16px;border:1.5px dashed var(--navy);background:var(--white);cursor:pointer}
+label.up.drop:hover{background:var(--paper)}
+.uploads:has(.sr-file:focus-visible) label.up.drop{outline:2px solid var(--bordeaux);outline-offset:3px}
+.drop-t{font-weight:600;color:var(--navy);font-size:15.5px}
+.drop-s{font-size:13px;color:var(--gray)}
+.file-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.file-list:empty{display:none}
+.file-list li{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:8px 10px;background:var(--white);border:1px solid var(--line);font-size:14px}
+.file-list .fn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-list .fs{color:var(--gray);font-size:13px}
+.file-list .linklike{font-size:13px;color:var(--bordeaux)}

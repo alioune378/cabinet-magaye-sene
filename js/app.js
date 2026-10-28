@@ -51,14 +51,48 @@
   var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 40); };
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-  // "Aucun" document unchecks the others, and vice versa
-  $$('#reqForm input[name="documents"]').forEach(function (cb) {
-    cb.addEventListener("change", function () {
-      if (!cb.checked) return;
-      $$('#reqForm input[name="documents"]').forEach(function (o) {
-        if (o !== cb && ((cb.value === "Aucun") !== (o.value === "Aucun"))) o.checked = false;
-      });
+  var status = $("#formStatus");
+
+  // Property location: fill the GPS field from the visitor's position when they are on site
+  var geoBtn = $("#f-geo"), geoStatus = $("#f-geo-status"), gps = $("#f-gps");
+  geoBtn.addEventListener("click", function () {
+    if (!navigator.geolocation) { geoStatus.textContent = t("f_geo_no"); return; }
+    geoStatus.textContent = t("f_geo_wait"); geoBtn.disabled = true;
+    navigator.geolocation.getCurrentPosition(function (p) {
+      var lat = p.coords.latitude.toFixed(6), lng = p.coords.longitude.toFixed(6);
+      gps.value = "https://maps.google.com/?q=" + lat + "," + lng;
+      geoStatus.textContent = t("f_geo_ok"); geoBtn.disabled = false;
+    }, function () {
+      geoStatus.textContent = t("f_geo_err"); geoBtn.disabled = false;
+    }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
+  });
+
+  // One place for every file: photos, documents, plans. Files add up across several picks.
+  var MAX_FILES = 8, picked = [], fileInput = $("#f-files"), fileList = $("#fileList");
+  var okType = function (f) { return f.type === "application/pdf" || /^image\//.test(f.type) || /\.(pdf|docx?|heic|heif)$/i.test(f.name); };
+  function sizeTxt(n) { var en = lang === "en"; return n > 1048576 ? (n / 1048576).toFixed(1) + (en ? " MB" : " Mo") : Math.max(1, Math.round(n / 1024)) + (en ? " KB" : " Ko"); }
+  function renderFiles() {
+    fileList.innerHTML = "";
+    picked.forEach(function (f, i) {
+      var li = document.createElement("li");
+      var nm = document.createElement("span"); nm.className = "fn"; nm.textContent = f.name;
+      var sz = document.createElement("span"); sz.className = "fs"; sz.textContent = sizeTxt(f.size);
+      var rm = document.createElement("button"); rm.type = "button"; rm.className = "linklike"; rm.textContent = t("f_up_rm");
+      rm.setAttribute("aria-label", t("f_up_rm") + " " + f.name);
+      rm.addEventListener("click", function () { picked.splice(i, 1); renderFiles(); });
+      li.appendChild(nm); li.appendChild(sz); li.appendChild(rm); fileList.appendChild(li);
     });
+  }
+  fileInput.addEventListener("change", function () {
+    var skipped = false;
+    Array.prototype.forEach.call(fileInput.files, function (f) {
+      if (!okType(f)) { skipped = true; return; }
+      if (picked.length < MAX_FILES) picked.push(f); else skipped = true;
+    });
+    fileInput.value = "";
+    renderFiles();
+    status.className = "form-status"; status.textContent = "";
+    if (skipped) { status.classList.add("bad"); status.textContent = t("f_up_skip"); }
   });
 
 
@@ -80,7 +114,7 @@
   }
 
   // form
-  var form = $("#reqForm"), status = $("#formStatus");
+  var form = $("#reqForm");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     status.className = "form-status"; status.textContent = "";
@@ -93,23 +127,17 @@
     if (bad) { status.classList.add("bad"); status.textContent = t("f_req"); bad.focus(); return; }
     var em = $("#f-email");
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim())) { em.setAttribute("aria-invalid", ""); status.classList.add("bad"); status.textContent = t("f_bad_email"); em.focus(); return; }
-    var files = $$('#reqForm input[type="file"]').map(function (i) { return i.files && i.files[0] ? { name: i.name, file: i.files[0] } : null; }).filter(Boolean);
-    for (var k = 0; k < files.length; k++) {
-      var ty = files[k].file.type;
-      if (!(ty === "application/pdf" || /^image\//.test(ty))) { status.classList.add("bad"); status.textContent = t("f_bad_type"); return; }
-    }
     var sb = $("#f-submit"); sb.disabled = true; sb.textContent = t("f_sending");
-    Promise.all(files.map(function (f) { return shrink(f.file).then(function (b) { return { name: f.name, blob: b, orig: f.file, fname: f.file.name }; }); }))
+    Promise.all(picked.map(function (f) { return shrink(f).then(function (b) { return { blob: b, orig: f, fname: f.name }; }); }))
       .then(function (ready) {
         var total = ready.reduce(function (a, r) { return a + r.blob.size; }, 0);
         if (total > 7 * 1024 * 1024) { var er = new Error("big"); er.big = true; throw er; }
         var fd = new FormData(form);
-        var docs = fd.getAll("documents"); fd.delete("documents"); fd.append("documents", docs.join(", "));
-        ["piece_propriete", "piece_plan", "piece_photo"].forEach(function (n) { fd.delete(n); });
-        ready.forEach(function (r) { fd.append(r.name, r.blob, r.blob === r.orig ? r.fname : r.fname.replace(/\.[^.]+$/, "") + ".jpg"); });
+        // Netlify Forms keeps one file per field, so each file goes in its own field: fichier_1 … fichier_8.
+        ready.forEach(function (r, i) { fd.append("fichier_" + (i + 1), r.blob, r.blob === r.orig ? r.fname : r.fname.replace(/\.[^.]+$/, "") + ".jpg"); });
         return fetch("/", { method: "POST", body: fd });
       })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); form.reset(); $("#f-lang").value = lang; status.classList.add("ok"); status.textContent = t("f_ok"); })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); form.reset(); picked = []; renderFiles(); geoStatus.textContent = ""; $("#f-lang").value = lang; status.classList.add("ok"); status.textContent = t("f_ok"); })
       .catch(function (err) { status.classList.add("bad"); status.textContent = err && err.big ? t("f_too_big") : t("f_err"); })
       .then(function () { sb.disabled = false; sb.textContent = t("f_send"); });
   });

@@ -32,7 +32,10 @@
  "description":"Expertise et évaluation immobilière indépendante au Sénégal : valeur vénale et locative, expertises amiables et judiciaires, conseil. Expert inscrit à l'Ordre National des Experts du Sénégal (ONES), section immobilière.",
  "image":"assets/og-image-vert-or.png","logo":"assets/og-image-vert-or.png",
  "telephone":"+221776383682","email":"contact@magayesene-expert.com",
+ "foundingDate":"1985",
  "address":{"@type":"PostalAddress","streetAddress":"Sud Foire, Villa n° 20, Cité Sonatel 2","addressLocality":"Dakar","addressCountry":"SN"},
+ "geo":{"@type":"GeoCoordinates","latitude":14.736021,"longitude":-17.465794},
+ "hasMap":"https://maps.app.goo.gl/ssh1nJ6GMsTgJ2ki9",
  "areaServed":{"@type":"Country","name":"Sénégal"},
  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"16:00"}],
  "knowsLanguage":["fr","en"],
@@ -45,7 +48,7 @@
 
 <!-- Netlify form definition -->
 <form name="demande-expertise" netlify netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
-  <input name="nom"><input name="telephone"><input name="email"><input name="pays"><input name="type_bien"><input name="localisation"><input name="objet"><input name="documents"><textarea name="message"></textarea><input name="langue"><input type="file" name="piece_propriete"><input type="file" name="piece_plan"><input type="file" name="piece_photo"><input name="bot-field">
+  <input name="nom"><input name="telephone"><input name="email"><input name="pays"><input name="type_bien"><input name="localisation"><input name="lien_localisation"><input name="repere"><input name="objet"><textarea name="message"></textarea><input name="langue"><input type="file" name="fichier_1"><input type="file" name="fichier_2"><input type="file" name="fichier_3"><input type="file" name="fichier_4"><input type="file" name="fichier_5"><input type="file" name="fichier_6"><input type="file" name="fichier_7"><input type="file" name="fichier_8"><input name="bot-field">
 </form>
 
 <header class="header">
@@ -84,11 +87,12 @@
       </div>
       <aside class="hero-side">
         <img class="hero-emblem" src="assets/monogramme-ms.png" alt="" width="110" height="120">
-        <p class="status" data-i18n="status">Inscrit au tableau de l'Ordre National des Experts du Sénégal (ONES), section immobilière – n° D1/49/84/19/E</p>
+        <p class="status" data-i18n="status">Inscrit au tableau de l'Ordre National des Experts du Sénégal (ONES) depuis 1984, section immobilière – n° D1/49/84/19/E</p>
         <p class="status court" data-i18n="court">Expert près les Cours et Tribunaux</p>
         <ul class="markers">
           <li><strong data-i18n="m1_t">Plus de 40 ans</strong><span data-i18n="m1">d'expérience dans l'immobilier au Sénégal</span></li>
-          <li><strong data-i18n="m2_t">Expert inscrit à l'Ordre</strong><span data-i18n="m2">section immobilière</span></li>
+          <li><strong data-i18n="m2_t">Inscrit à l'Ordre depuis 1984</strong><span data-i18n="m2">section immobilière</span></li>
+          <li><strong data-i18n="m4_t">Fondé en 1985</strong><span data-i18n="m4">au service de ses clients à Dakar</span></li>
           <li><strong data-i18n="m3_t">Indépendance</strong><span data-i18n="m3">et secret professionnel</span></li>
         </ul>
       </aside>
@@ -124,10 +128,15 @@
       <div>
         <p class="kicker" data-n="02" data-i18n="exp_k">L'expert</p>
         <h2 data-i18n="exp_title">Magaye Sène, expert immobilier</h2>
-        <p data-i18n="exp_p">Magaye Sène exerce dans l'immobilier au Sénégal depuis plus de 40 ans. Il est inscrit au tableau de l'Ordre National des Experts du Sénégal, dans la section immobilière, sous le numéro D1/49/84/19/E.</p>
+        <p data-i18n="exp_p">Magaye Sène exerce dans l'immobilier au Sénégal depuis plus de 40 ans. Il est inscrit au tableau de l'Ordre National des Experts du Sénégal depuis 1984, dans la section immobilière, sous le numéro D1/49/84/19/E. Il a ouvert son bureau d'expertise à Dakar en 1985.</p>
+        <ul class="milestones">
+          <li><strong>1984</strong><span data-i18n="ms1">Inscription au tableau de l'Ordre National des Experts du Sénégal</span></li>
+          <li><strong>1985</strong><span data-i18n="ms2">Ouverture du bureau d'expertise à Dakar</span></li>
+        </ul>
         <div class="verify">
           <h3 data-i18n="verify_t">Vérifier l'inscription</h3>
-          <p data-i18n="verify_p">L'inscription d'un expert peut être vérifiée auprès de l'Ordre National des Experts du Sénégal.</p>
+          <p data-i18n="verify_p">Le nom de Magaye Sène figure sur le site de l'Ordre National des Experts du Sénégal, dans la liste de la section immobilière.</p>
+          <p><a class="btn-text verify-link" href="https://www.experts-ones.com/section-immobiliere-president-mohamed-lamine-sarr/" target="_blank" rel="noopener" data-i18n="verify_link">Voir son nom sur le site de l'Ordre (ONES)</a></p>
         </div>
       </div>
       <div>
@@ -257,7 +266,7 @@
       <details><summary data-i18n="q2">Titre foncier, bail, délibération : quelle différence ?</summary><p data-i18n="a2">En termes simples : le titre foncier établit la propriété du terrain ; le bail donne un droit d'occupation pour une durée définie ; la délibération d'une commune accorde un droit d'usage sur une terre du domaine national. La nature du droit influence fortement la valeur du bien.</p></details>
       <details><summary data-i18n="q3">Qui peut demander une expertise ?</summary><p data-i18n="a3">Toute personne ou organisation concernée par un bien : propriétaire, acheteur, héritier, banque, entreprise, avocat, notaire ou juridiction.</p></details>
       <details><summary data-i18n="q4">Le rapport est-il reconnu par les banques et les notaires ?</summary><p data-i18n="a4">Le rapport est établi et signé par un expert inscrit à l'Ordre. Chaque destinataire reste libre de ses propres exigences : renseignez-vous auprès de lui avant la mission.</p></details>
-      <details><summary data-i18n="q5">Comment vérifier qu'un expert est inscrit à l'Ordre ?</summary><p data-i18n="a5">Demandez son numéro d'inscription et vérifiez-le auprès de l'Ordre National des Experts du Sénégal. Seuls les experts inscrits au tableau de l'Ordre peuvent utiliser le titre d'expert.</p></details>
+      <details><summary data-i18n="q5">Comment vérifier qu'un expert est inscrit à l'Ordre ?</summary><p data-i18n="a5">Demandez son numéro d'inscription et vérifiez-le auprès de l'Ordre National des Experts du Sénégal. Seuls les experts inscrits au tableau de l'Ordre peuvent utiliser le titre d'expert.</p><p><a class="btn-text verify-link" href="https://www.experts-ones.com/section-immobiliere-president-mohamed-lamine-sarr/" target="_blank" rel="noopener" data-i18n="verify_link2">Voir l'inscription de Magaye Sène sur le site de l'Ordre</a></p></details>
       <details><summary data-i18n="q6">Combien de temps faut-il pour obtenir le rapport ?</summary><p data-i18n="a6">Le délai dépend de la nature du bien, de la complexité du dossier et des missions en cours. Un dossier important peut parfois être traité en moins d'une semaine, tandis qu'un dossier simple peut demander plus de temps s'il nécessite des documents ou des vérifications. Le délai prévu vous est indiqué par écrit dans la proposition de mission.</p></details>
       <details><summary data-i18n="q7">Quand le cabinet répond-il à une demande ?</summary><p data-i18n="a7">Chaque demande reçoit une réponse rapide. Pour un dossier complexe, une proposition de mission vous est adressée dans les 24 heures.</p></details>
       <p class="section-cta"><span data-i18n="faq_more">Vous avez une autre question ?</span> <a class="btn btn-dark" href="#contact" data-i18n="cta_request2">Contacter le cabinet</a></p>
@@ -271,7 +280,7 @@
         <p class="kicker" data-n="08" data-i18n="ct_k">Contact</p>
         <h2 data-i18n="ct_title">Demander une expertise</h2>
         <ul class="coords">
-          <li><span class="lbl" data-i18n="c_addr">Adresse</span><span data-i18n="addr_full">Sud Foire, Villa n° 20, Cité Sonatel 2, Dakar, Sénégal</span></li>
+          <li><span class="lbl" data-i18n="c_addr">Adresse</span><span><span data-i18n="addr_full">Sud Foire, Villa n° 20, Cité Sonatel 2, Dakar, Sénégal</span><br><a href="https://maps.app.goo.gl/ssh1nJ6GMsTgJ2ki9" target="_blank" rel="noopener" data-i18n="addr_map">Ouvrir dans Google Maps</a></span></li>
           <li><span class="lbl" data-i18n="c_tel">Téléphone et WhatsApp</span><a href="tel:+221776383682">+221 77 638 36 82</a></li>
           <li><span class="lbl" data-i18n="c_mail">E-mail</span><a href="mailto:contact@magayesene-expert.com">contact@magayesene-expert.com</a></li>
           <li><span class="lbl" data-i18n="c_hours">Horaires</span><span data-i18n="hours">Du lundi au vendredi, de 8 h à 16 h (heure de Dakar)</span></li>
@@ -279,9 +288,10 @@
         <div class="quick">
           <a class="btn btn-green" href="https://wa.me/221776383682" target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn btn-line-dark" href="tel:+221776383682" data-i18n="call">Appeler</a>
+          <a class="btn btn-line-dark" href="https://maps.app.goo.gl/ssh1nJ6GMsTgJ2ki9" target="_blank" rel="noopener" data-i18n="directions">Itinéraire vers le bureau</a>
         </div>
         <div class="map">
-          <iframe title="Carte – Cité Sonatel 2, Sud Foire, Dakar" data-i18n-title="map_title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Cit%C3%A9%20Sonatel%202%2C%20Sud%20Foire%2C%20Dakar%2C%20S%C3%A9n%C3%A9gal&z=15&output=embed"></iframe>
+          <iframe title="Carte – bureau de Magaye Sène, Cité Sonatel 2, Sud Foire, Dakar" data-i18n-title="map_title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=14.736021,-17.465794&z=17&output=embed"></iframe>
         </div>
       </div>
 
@@ -308,29 +318,30 @@
               <option value="Terrain" data-i18n="t1">Terrain</option><option value="Maison" data-i18n="t2">Maison</option><option value="Appartement" data-i18n="t3">Appartement</option><option value="Immeuble" data-i18n="t4">Immeuble</option><option value="Local commercial" data-i18n="t5">Local commercial</option><option value="Hangar" data-i18n="t6">Hangar</option><option value="Verger" data-i18n="t7">Verger</option><option value="Autre" data-i18n="opt_other">Autre</option>
             </select></div>
         </div>
-        <div class="field"><label for="f-loc" data-i18n="f_loc">Localisation du bien (commune, quartier) *</label><input id="f-loc" name="localisation" required></div>
+        <fieldset class="field locbox">
+          <legend data-i18n="f_loc_t">Localisation du bien</legend>
+          <p class="up-hint" data-i18n="f_loc_hint">Ces informations permettent à l'équipe de se rendre directement sur place pour la visite.</p>
+          <div class="field"><label for="f-loc" data-i18n="f_loc">Commune et quartier *</label><input id="f-loc" name="localisation" required></div>
+          <div class="field"><label for="f-gps" data-i18n="f_gps">Lien Google Maps ou position GPS du bien</label><input id="f-gps" name="lien_localisation" inputmode="url" autocomplete="off" placeholder="https://maps.app.goo.gl/…"></div>
+          <div class="loc-actions">
+            <button type="button" class="btn btn-line-dark" id="f-geo" data-i18n="f_geo">Je suis sur place : utiliser ma position</button>
+            <span class="up-hint" id="f-geo-status" role="status" aria-live="polite"></span>
+          </div>
+          <p class="up-hint" data-i18n="f_gps_help">Pas sur place ? Dans Google Maps, appuyez longuement sur l'emplacement du bien, touchez « Partager », puis collez le lien ici.</p>
+          <div class="field"><label for="f-rep" data-i18n="f_rep">Point de repère (facultatif)</label><input id="f-rep" name="repere" autocomplete="off"></div>
+        </fieldset>
         <div class="field"><label for="f-objet" data-i18n="f_objet">Objet de l'expertise *</label>
           <select id="f-objet" name="objet" required>
             <option value="" data-i18n="f_choose">Choisir…</option>
             <option value="Achat" data-i18n="o1">Achat</option><option value="Vente" data-i18n="o2">Vente</option><option value="Succession ou partage" data-i18n="o3">Succession ou partage</option><option value="Garantie bancaire" data-i18n="o4">Garantie bancaire</option><option value="Location" data-i18n="o5">Location</option><option value="Litige" data-i18n="o6">Litige</option><option value="Autre" data-i18n="opt_other">Autre</option>
           </select></div>
-        <fieldset class="field">
-          <legend data-i18n="f_docs">Documents disponibles</legend>
-          <div class="checks">
-            <label><input type="checkbox" name="documents" value="Titre foncier"> <span data-i18n="k1">Titre foncier</span></label>
-            <label><input type="checkbox" name="documents" value="Bail"> <span data-i18n="k2">Bail</span></label>
-            <label><input type="checkbox" name="documents" value="Délibération"> <span data-i18n="k3">Délibération</span></label>
-            <label><input type="checkbox" name="documents" value="Plans"> <span data-i18n="k4">Plans</span></label>
-            <label><input type="checkbox" name="documents" value="Aucun"> <span data-i18n="k5">Aucun</span></label>
-          </div>
-        </fieldset>
         <fieldset class="field uploads">
-          <legend data-i18n="f_up">Joindre des documents (facultatif)</legend>
-          <p class="up-hint" data-i18n="f_up_hint">Formats PDF, JPG ou PNG, 7 Mo au total. Les photos sont réduites automatiquement avant l'envoi.</p>
-          <label class="up"><span data-i18n="f_up1">Document de propriété (titre foncier, bail ou délibération)</span><input type="file" name="piece_propriete" accept=".pdf,image/*"></label>
-          <label class="up"><span data-i18n="f_up2">Plan ou croquis</span><input type="file" name="piece_plan" accept=".pdf,image/*"></label>
-          <label class="up"><span data-i18n="f_up3">Photo du bien</span><input type="file" name="piece_photo" accept="image/*"></label>
-          <p class="up-warn" data-i18n="f_up_warn">Envoyez uniquement les documents utiles à l'expertise. Votre pièce d'identité vous sera demandée au moment de la mission : ne la joignez pas à ce formulaire.</p>
+          <legend data-i18n="f_up">Joindre des fichiers (facultatif)</legend>
+          <p class="up-hint" data-i18n="f_up_hint">Photos du bien, documents, plans : ajoutez tout ce que vous souhaitez transmettre, au même endroit. Jusqu'à 8 fichiers, 7 Mo au total. Les photos sont réduites automatiquement.</p>
+          <label class="up drop" for="f-files"><span class="drop-t" data-i18n="f_up_btn">Ajouter des photos ou des documents</span><span class="drop-s" data-i18n="f_up_sub">PDF, photos ou documents Word</span></label>
+          <input type="file" id="f-files" class="sr-file" multiple accept=".pdf,.doc,.docx,image/*">
+          <ul class="file-list" id="fileList" aria-live="polite"></ul>
+          <p class="up-warn" data-i18n="f_up_warn">Votre pièce d'identité vous sera demandée au moment de la mission : ne la joignez pas à ce formulaire.</p>
         </fieldset>
         <div class="field"><label for="f-msg" data-i18n="f_msg">Message</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
         <button type="submit" class="btn btn-green" id="f-submit" data-i18n="f_send">Envoyer la demande</button>
